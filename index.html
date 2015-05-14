@@ -61,7 +61,8 @@
                 $("#download").attr("left", "250px");
         });
 
-        $('#send_email').click(function() {
+        $('#send_email').click(function(e) {
+                e.preventDefault();
                     $.ajax({
               type: "POST",
               url: "https://mandrillapp.com/api/1.0/messages/send.json",
